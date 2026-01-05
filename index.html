@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICON TALKS | Training, Placement & IT Staffing</title>
+
+  <!-- SEO -->
+  <meta name="description" content="ICON TALKS is a training, placement and IT staffing platform offering Automation Testing, Software Testing training and job-ready professionals for companies." />
+  <meta name="keywords" content="automation testing training, software testing course, IT staffing services, selenium training, placement support" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.6); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    :root{
+      --primary:#2563eb;--secondary:#38bdf8;--accent:#22c55e;--danger:#ef4444;
+      --bg:#020617;--card:#020617f2;--text:#e5e7eb;--muted:#94a3b8;
+      --gradient1: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+      --gradient2: linear-gradient(135deg, #38bdf8 0%, #22c55e 100%);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    html { scroll-behavior: smooth; }
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,#020617,#0f172a);
+      color:var(--text);
+      line-height:1.75;
+      overflow-x:hidden;
+      width:100%;
+      min-height:100vh;
+    }
+
+    /* NAV */
+    header{background:linear-gradient(135deg,#1d4ed8 0%,#0f172a 100%);position:relative;top:0;z-index:999;box-shadow:0 8px 32px rgba(0,0,0,0.3);width:100%}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:22px 5%;width:100%;flex-wrap:wrap;gap:20px}
+    .brand{display:flex;gap:12px;align-items:center;animation:slideInLeft 0.8s ease}
+    .brand h2{font-size:1.4rem;background:var(--gradient1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .logo{width:44px;height:44px;border-radius:12px;background:var(--gradient1);display:flex;align-items:center;justify-content:center;font-weight:800;color:#020617;animation:float 3s ease-in-out infinite}
+    .nav-links{display:flex;gap:25px;flex-wrap:wrap}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:500;transition:all 0.3s ease;white-space:nowrap}
+    .nav-links a:hover{color:#fff;transform:translateY(-3px)}
+
+    /* HERO */
+    .hero{padding:80px 5%;width:100%;animation:fadeInUp 1s ease}
+    .hero h1{font-size:3.5rem;font-weight:800;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#38bdf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px}
+    .hero h1 span{color:var(--secondary)}
+    .hero .subtitle{font-size:1.3rem;color:var(--secondary);font-weight:600;margin-bottom:20px}
+    .hero p{margin:15px 0;color:var(--muted);max-width:900px;font-size:1.05rem}
+    .cta-btns{display:flex;gap:15px;margin-top:40px;flex-wrap:wrap}
+    .cta-btns a{display:inline-block;padding:16px 40px;border-radius:12px;text-decoration:none;font-weight:600;transition:all 0.3s ease;cursor:pointer;border:none}
+    .primary{background:var(--gradient1);color:#fff;box-shadow:0 10px 30px rgba(37,99,235,0.3)}
+    .primary:hover{transform:translateY(-5px);box-shadow:0 15px 50px rgba(37,99,235,0.5)}
+    .secondary{border:2px solid var(--secondary);color:var(--secondary);background:transparent}
+    .secondary:hover{background:var(--secondary);color:#020617;transform:translateY(-5px)}
+
+    /* STATS SECTION */
+    .stats{padding:80px 5%;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;width:100%}
+    .stat-item{text-align:center;animation:fadeInUp 1s ease}
+    .stat-number{font-size:3.5rem;font-weight:800;color:var(--secondary);display:flex;align-items:center;justify-content:center}
+    .stat-label{color:var(--muted);font-size:1rem;margin-top:10px}
+
+    /* MAIN SECTIONS */
+    section{padding:80px 5%;width:100%}
+    section h2{font-size:2.8rem;margin-bottom:20px;background:linear-gradient(135deg,#fff 0%,#38bdf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .desc{color:var(--muted);max-width:900px;font-size:1.05rem}
+
+    /* GRID & CARDS */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:50px}
+    .card{
+      background:linear-gradient(135deg,rgba(15,23,42,0.5) 0%,rgba(30,41,59,0.3) 100%);
+      padding:40px;
+      border-radius:20px;
+      border:1px solid rgba(56,189,248,0.2);
+      transition:all 0.3s ease;
+      animation:fadeInUp 0.8s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:'';
+      position:absolute;
+      top:0;left:0;width:100%;height:100%;
+      background:linear-gradient(135deg,rgba(56,189,248,0.1) 0%,transparent 100%);
+      opacity:0;
+      transition:opacity 0.3s ease;
+      z-index:0;
+    }
+    .card:hover{
+      border-color:var(--secondary);
+      transform:translateY(-10px);
+      box-shadow:0 20px 50px rgba(56,189,248,0.2);
+    }
+    .card:hover::before{opacity:1}
+    .card h3{color:var(--secondary);margin-bottom:15px;font-size:1.3rem;position:relative;z-index:1}
+    .card p{position:relative;z-index:1;line-height:1.8;color:var(--text)}
+    .card-icon{
+      width:60px;height:60px;
+      background:var(--gradient1);
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.8rem;
+      margin-bottom:15px;
+    }
+
+    /* FEATURES */
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+    .feature{padding:25px;background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.1);border-radius:15px;transition:all 0.3s ease;display:flex;gap:15px}
+    .feature:hover{border-color:var(--secondary);transform:translateX(10px)}
+    .feature-icon{width:50px;height:50px;min-width:50px;background:var(--gradient2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:bold}
+    .feature-content h4{color:var(--secondary);margin-bottom:8px}
+    .feature-content p{color:var(--muted);font-size:0.95rem}
+
+    /* CURRICULUM */
+    .curriculum-item{
+      background:linear-gradient(135deg,rgba(37,99,235,0.1) 0%,rgba(56,189,248,0.1) 100%);
+      padding:30px;
+      border-left:4px solid var(--secondary);
+      border-radius:10px;
+      margin-bottom:20px;
+      transition:all 0.3s ease;
+    }
+    .curriculum-item:hover{transform:translateX(10px);background:linear-gradient(135deg,rgba(37,99,235,0.2) 0%,rgba(56,189,248,0.2) 100%)}
+    .curriculum-item h4{color:var(--secondary);margin-bottom:10px;font-size:1.1rem}
+    .curriculum-item p{color:var(--muted);font-size:0.95rem}
+
+    /* TESTIMONIALS */
+    .testimonials{padding:80px 5%;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);width:100%}
+    .testimonials h2{font-size:2.8rem;margin-bottom:50px;background:linear-gradient(135deg,#fff 0%,#38bdf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .testimonial{
+      background:linear-gradient(135deg,rgba(15,23,42,0.8) 0%,rgba(30,41,59,0.5) 100%);
+      padding:35px;
+      border-radius:15px;
+      border:1px solid rgba(56,189,248,0.2);
+      position:relative;
+      animation:fadeInUp 0.8s ease;
+    }
+    .testimonial::before{
+      content:'"';
+      position:absolute;
+      top:-10px;left:20px;
+      font-size:4rem;
+      color:var(--secondary);
+      opacity:0.2;
+    }
+    .stars{color:#fbbf24;margin-bottom:15px;letter-spacing:3px}
+    .testimonial-text{color:var(--text);margin-bottom:20px;font-style:italic;line-height:1.8}
+    .testimonial-author{color:var(--secondary);font-weight:600;margin-bottom:5px}
+    .testimonial-role{color:var(--muted);font-size:0.9rem}
+
+    /* FAQ */
+    .faq-section{padding:80px 5%;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);width:100%}
+    .faq-section h2{font-size:2.8rem;margin-bottom:50px;background:linear-gradient(135deg,#fff 0%,#38bdf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .faq-container{max-width:900px}
+    .faq-item{
+      margin-bottom:20px;
+      background:linear-gradient(135deg,rgba(15,23,42,0.6) 0%,rgba(30,41,59,0.3) 100%);
+      border:1px solid rgba(56,189,248,0.2);
+      border-radius:15px;
+      overflow:hidden;
+      animation:fadeInUp 0.8s ease;
+    }
+    .faq-question{
+      padding:25px;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:linear-gradient(135deg,rgba(37,99,235,0.1) 0%,rgba(56,189,248,0.1) 100%);
+      transition:all 0.3s ease;
+      font-weight:600;
+      color:var(--secondary);
+      user-select:none;
+    }
+    .faq-question:hover{background:linear-gradient(135deg,rgba(37,99,235,0.2) 0%,rgba(56,189,248,0.2) 100%)}
+    .faq-toggle{transition:transform 0.3s ease}
+    .faq-item.active .faq-toggle{transform:rotate(180deg)}
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.3s ease;
+      color:var(--muted);
+      padding:0 25px;
+    }
+    .faq-item.active .faq-answer{
+      max-height:500px;
+      padding:0 25px 25px 25px;
+    }
+
+    /* FOOTER */
+    footer{padding:60px 5%;border-top:1px solid rgba(56,189,248,0.1);background:linear-gradient(135deg,#0f172a 0%,#020617 100%);color:var(--muted);display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:50px;width:100%}
+    footer h4{color:#fff;margin-bottom:15px;font-size:1.1rem}
+    footer a{display:block;color:var(--muted);text-decoration:none;margin:8px 0;transition:all 0.3s ease}
+    footer a:hover{color:var(--secondary);transform:translateX(5px)}
+    footer p{color:var(--muted);font-size:0.95rem;line-height:1.6}
+    .copyright{text-align:center;padding:30px 5%;color:#64748b;border-top:1px solid rgba(56,189,248,0.1);width:100%}
+
+    /* FLOATING BUTTON */
+    .whatsapp{
+      position:fixed;
+      bottom:30px;
+      right:30px;
+      background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);
+      color:#fff;
+      padding:16px 22px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      animation:float 3s ease-in-out infinite;
+      box-shadow:0 10px 30px rgba(37,99,235,0.3);
+      transition:all 0.3s ease;
+      z-index:100;
+      border:none;
+      cursor:pointer;
+    }
+    .whatsapp:hover{
+      transform:scale(1.1);
+      box-shadow:0 15px 50px rgba(37,99,235,0.5);
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero h1{font-size:2.8rem}
+      section h2,.testimonials h2,.faq-section h2{font-size:2.2rem}
+    }
+    @media(max-width:768px){
+      .nav{padding:15px 20px;flex-direction:row}
+      .nav-links{gap:15px;order:3;width:100%;flex-direction:column}
+      .nav-links a{font-size:0.9rem}
+      .hero{padding:60px 20px}
+      .hero h1{font-size:2rem}
+      .hero .subtitle{font-size:1rem}
+      section{padding:60px 20px}
+      section h2,.testimonials h2,.faq-section h2{font-size:1.8rem}
+      .stats{grid-template-columns:1fr 1fr;gap:20px;padding:60px 20px}
+      .cta-btns{flex-direction:column}
+      .cta-btns a{width:100%;text-align:center}
+      .grid{grid-template-columns:1fr}
+      .testimonials{padding:60px 20px}
+      .faq-section{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><div class="logo">IT</div><h2>ICON TALKS</h2></div>
+    <div class="nav-links">
+      <a href="#training">Training</a>
+      <a href="#staffing">Staffing</a>
+      <a href="#contact">Enroll</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="subtitle">🚀 Launch Your Tech Career</div>
+    <h1>Excellence in <span>Tech Training & Staffing</span></h1>
+    <p><strong>Industry-ready training with 100% job placement support.</strong></p>
+    <p>Learn from experts, build real-world projects, and land your dream job in IT. Join thousands of successful graduates.</p>
+    <div class="cta-btns">
+      <a class="primary" href="#contact">Start Learning Today</a>
+      <a class="secondary" href="#staffing">Hire Talented Professionals</a>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-number">5K+</div>
+    <div class="stat-label">Students Trained</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">95%</div>
+    <div class="stat-label">Placement Rate</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">500+</div>
+    <div class="stat-label">Partner Companies</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">6.8 LPA</div>
+    <div class="stat-label">Avg. Salary Hike</div>
+  </div>
+</div>
+
+<!-- TRAINING SECTION -->
+<section id="training">
+  <h2>🎓 Industry-Ready Training Programs</h2>
+  <p class="desc">Excellence in Tech Training & Staffing.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Why Choose Us?</h3>
+      <p>✔ Industry experts with 10+ years experience<br>
+      ✔ Live interactive sessions<br>
+      ✔ Real-time project exposure<br>
+      ✔ Mock interviews & resume building<br>
+      ✔ Lifetime access to recordings<br>
+      ✔ Job placement guarantee</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-flask"></i></div>
+      <h3>Advanced Curriculum</h3>
+      <p><strong>Selenium with Java</strong><br>TestNG & Cucumber (BDD)<br><strong>API Testing</strong> - Postman & Rest Assured<br><strong>Framework Design</strong> - Data-Driven & Keyword-Driven<br><strong>CI/CD Integration</strong><br><strong>Cloud Testing</strong><br>Performance Testing Basics</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-users"></i></div>
+      <h3>Who Should Enroll?</h3>
+      <p>✔ Freshers & Graduates<br>
+      ✔ Manual QA Engineers<br>
+      ✔ Career Switchers<br>
+      ✔ Working Professionals<br>
+      ✔ Job Seekers<br>
+      ✔ Students from any background</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:60px;color:var(--secondary);font-size:1.8rem">📚 Complete Learning Path</h3>
+  <div style="max-width:900px">
+    <div class="curriculum-item">
+      <h4>Phase 1: Foundation (Weeks 1-3)</h4>
+      <p>Java basics, OOP concepts, IDE setup, Git & GitHub, version control fundamentals</p>
+    </div>
+    <div class="curriculum-item">
+      <h4>Phase 2: Selenium Mastery (Weeks 4-8)</h4>
+      <p>Selenium WebDriver, Element locators, Waits, Mouse & Keyboard actions, Handling dropdowns, alerts, windows</p>
+    </div>
+    <div class="curriculum-item">
+      <h4>Phase 3: Framework Development (Weeks 9-12)</h4>
+      <p>Page Object Model, Data-Driven Testing, Cucumber BDD, TestNG, Reporting & Logging</p>
+    </div>
+    <div class="curriculum-item">
+      <h4>Phase 4: Advanced Topics (Weeks 13-16)</h4>
+      <p>API Testing, CI/CD Jenkins, Database Testing, Cross-browser testing, Real projects</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <h2>✨ What You'll Master</h2>
+  <p class="desc">Comprehensive skill development with industry-relevant expertise</p>
+
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">01</div>
+      <div class="feature-content">
+        <h4>Selenium WebDriver</h4>
+        <p>Master modern automation testing with Selenium 4</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">02</div>
+      <div class="feature-content">
+        <h4>Java Programming</h4>
+        <p>Strong foundation in OOP and Java concepts</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">03</div>
+      <div class="feature-content">
+        <h4>BDD & Cucumber</h4>
+        <p>Write readable test cases with Cucumber framework</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">04</div>
+      <div class="feature-content">
+        <h4>API Testing</h4>
+        <p>Test REST APIs with Postman and Rest Assured</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">05</div>
+      <div class="feature-content">
+        <h4>CI/CD Pipeline</h4>
+        <p>Integrate tests with Jenkins and GitHub Actions</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">06</div>
+      <div class="feature-content">
+        <h4>Interview Ready</h4>
+        <p>Get trained for tech interviews and assessments</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>⭐ Success Stories</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"ICON TALKS transformed my career! The training was comprehensive and the placement support was incredible. I got placed within 2 months!"</div>
+      <div class="testimonial-author">Priya Singh</div>
+      <div class="testimonial-role">QA Automation Engineer @ TCS</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"The instructors were experts who made complex concepts easy to understand. The real-world projects gave me confidence before interviews."</div>
+      <div class="testimonial-author">Rahul Verma</div>
+      <div class="testimonial-role">Test Automation Engineer @ Wipro</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"Best decision I made! The curriculum was up-to-date, mentors were very supportive, and I cleared interviews at multiple companies."</div>
+      <div class="testimonial-author">Anjali Sharma</div>
+      <div class="testimonial-role">Automation QA @ HCL Technologies</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"I switched careers from manual testing to automation. ICON TALKS made it smooth with structured learning and great mentorship."</div>
+      <div class="testimonial-author">Aditya Patel</div>
+      <div class="testimonial-role">Senior QA Engineer @ Infosys</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"The 4-month course equipped me with all the skills needed. I got placed with a 40% salary hike. Highly recommended!"</div>
+      <div class="testimonial-author">Deepika Nair</div>
+      <div class="testimonial-role">QA Automation Specialist @ Amazon</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"Outstanding training quality, incredible community, and genuine job placement support. Worth every penny!"</div>
+      <div class="testimonial-author">Vikram Kumar</div>
+      <div class="testimonial-role">Test Engineer @ Google</div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFFING SECTION -->
+<section id="staffing">
+  <h2>🤝 IT Staffing Solutions</h2>
+  <p class="desc">Connect with skilled, job-ready IT professionals for your organization's growth.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+      <h3>Our Staffing Services</h3>
+      <p>✔ Permanent Staffing<br>
+      ✔ Contract-based Placement<br>
+      ✔ Project-specific Resources<br>
+      ✔ Dedicated Support Team<br>
+      ✔ Quality Assurance<br>
+      ✔ Fast Turnaround</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-code"></i></div>
+      <h3>Available Resources</h3>
+      <p>✔ QA Automation Engineers<br>
+      ✔ Manual Testing Specialists<br>
+      ✔ Test Lead & Managers<br>
+      ✔ Software Developers<br>
+      ✔ Business Analysts<br>
+      ✔ DevOps Engineers</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-star"></i></div>
+      <h3>Why Partner With Us?</h3>
+      <p>✔ Verified & trained professionals<br>
+      ✔ 95%+ client satisfaction<br>
+      ✔ Quick resource availability<br>
+      ✔ Competitive pricing<br>
+      ✔ Ongoing support & replacements<br>
+      ✔ Flexible engagement models</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+    <div class="faq-item active">
+      <div class="faq-question">
+        <span>What is the duration of the course?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our Professional program is 16 weeks (4 months) with live interactive sessions. You get lifetime access to all recorded content, so you can learn at your own pace even after the program ends.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do I need prior programming experience?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Not at all! We teach Java from scratch and cover all basics. Our curriculum is designed for beginners to advanced learners. However, some basic computer knowledge is helpful.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What's the job placement guarantee?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>We provide 100% placement assistance through our network of 500+ partner companies. Our team helps with resume building, interview prep, and job interviews. 95% of our students get placed within 3 months.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What's the average salary after the course?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our students receive an average salary of 6.8 LPA (Lakhs Per Annum) in their first role. Many report a 40-60% salary increase if they were already working in manual QA.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I access the course materials after completion?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! You get lifetime access to all video lectures, notes, and code files. You can revisit the material anytime for reference or to refresh your knowledge.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How are the live sessions structured?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Classes are held 3-4 times per week for 2-3 hours each. Sessions include theory, live coding, Q&A, and assignments. All sessions are recorded for those who can't attend live.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What if I don't get placed after the course?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our placement team continues to support you with interview practice, resume updates, and job matching. If placement isn't guaranteed in your plan, we offer a satisfaction guarantee or money-back option.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is this course recognized by companies?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! Our certificate is recognized by 500+ partner companies and major IT firms. More importantly, your practical skills and portfolio projects demonstrate your competency to employers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="contact">
+  <h2>🚀 Start Your Success Journey Today!</h2>
+  <p class="desc">Join thousands of successful graduates who landed their dream jobs through ICON TALKS training.</p>
+  <div style="margin-top:40px;display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+    <a class="primary" href="https://forms.gle/8yxSopFimHShcrfq5" target="_blank" style="padding:18px 50px;font-size:1.1rem">Enroll Now - Limited Batch</a>
+    <a class="secondary" href="https://chat.whatsapp.com/Fbx6CGukbTAIDPLpVaQVy2" target="_blank" style="padding:18px 50px;font-size:1.1rem">Join WhatsApp Community</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h4>ICON TALKS</h4>
+    <p style="color:var(--muted)">Empowering careers in IT & QA Automation through quality training and placement support.</p>
+  </div>
+  <div>
+    <h4>Programs</h4>
+    <a href="#training">Automation Testing Course</a>
+    <a href="#staffing">IT Staffing</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="#training">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div>
+    <h4>Contact & Social</h4>
+    <a href="mailto:info@icontalks.org">📧 info@icontalks.org</a>
+    <a href="https://chat.whatsapp.com/Fbx6CGukbTAIDPLpVaQVy2" target="_blank">💬 WhatsApp Community</a>
+    <a href="https://www.youtube.com/@icontalks6642" target="_blank">📺 YouTube Channel</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ICON TALKS. All rights reserved. | Training Excellence • Placement Support • Career Growth</div>
+
+<a class="whatsapp" href="https://chat.whatsapp.com/Fbx6CGukbTAIDPLpVaQVy2" target="_blank">💬 Join WhatsApp</a>
+
+<script>
+  // FAQ Toggle Functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+
+  // Smooth scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'none';
+        setTimeout(() => {
+          entry.target.style.animation = '';
+        });
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.card, .feature, .testimonial').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
